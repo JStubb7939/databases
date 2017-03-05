@@ -1,7 +1,6 @@
 var mysql = require('mysql');
 
 exports.connection = mysql.createConnection({
-  //host: 'localhost',
   user: 'root',
   password: '',
   database: 'chat'
@@ -14,3 +13,25 @@ exports.connection = mysql.createConnection({
 // and to the database "chat".
 
 
+// solution - orm
+//
+// var Sequelize = require('Sequelize');
+// var orm = new Sequelize('chat', 'root', '');
+
+// var User = orm.define('User', {
+//   username: Sequelize.STRING
+// });
+
+// var Message = orm.define('User', {
+//   text: Sequelize.STRING,
+//   rooomname: Sequelize.STRING
+// });
+
+// User.hasMany(Message);
+// Message.belongsTo(User);
+//
+// User.sync();
+// Message.sync();
+//
+// exports.User = User;
+// exports.Message = Message;
